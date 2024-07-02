@@ -10,14 +10,19 @@
             // Redirecionamento para o link de afiliado
             var linkAfiliado = "https://onelink.shein.com/2/3sc17hjly5bm";
             
-            // Redirecionamento para o produto específico após alguns segundos
-            setTimeout(function() {
-                window.location.href = "https://br.shein.com/Men-s-String-Bracelets-p-26843985.html";
-            }, 3000); // 3000 milissegundos = 3 segundos
+            // Verificar se é um dispositivo móvel
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                // Link para abrir o aplicativo da Shein (exemplo)
+                var linkAppShein = "shein://";
+                window.location.href = linkAppShein;
+            } else {
+                // Redirecionamento padrão para o link de afiliado
+                window.location.href = linkAfiliado;
+            }
         };
     </script>
 </head>
 <body>
-    <p>Estamos redirecionando a página. Dripamerican996 agradece a paciência!</p>
+    <p>Redirecionando para a página de afiliado ou para o aplicativo da Shein...</p>
 </body>
 </html>
